@@ -11,34 +11,41 @@ export default function Contact() {
         email: "",
         message: "",
     });
-    const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus("sending");
 
-        const subject = encodeURIComponent(`Contact from ${formData.firstName} ${formData.lastName}`);
-        const body = encodeURIComponent(
-            `Name: ${formData.firstName} ${formData.lastName}\n` +
-            `Email: ${formData.email}\n\n` +
-            `Message:\n${formData.message}`
-        );
+        const formData = new FormData(e.currentTarget);
+        formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "");
 
-        if (typeof window !== 'undefined') {
-            window.location.href = `mailto:email@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                setStatus("sent");
+                setFormData({ firstName: "", lastName: "", email: "", message: "" });
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            console.error("Form error:", error);
+            setStatus("error");
         }
 
-        setStatus("sent");
-
-        // Reset form after 3 seconds
+        // Reset status after 3 seconds
         setTimeout(() => {
             setStatus("idle");
-            setFormData({ firstName: "", lastName: "", email: "", message: "" });
         }, 3000);
     };
 
@@ -161,6 +168,17 @@ export default function Contact() {
                                             className="flex items-center gap-2 text-black"
                                         >
                                             Message Sent! <CheckCircle2 size={18} />
+                                        </motion.span>
+                                    )}
+                                    {status === "error" && (
+                                        <motion.span
+                                            key="error"
+                                            initial={{ y: 20, opacity: 0 }}
+                                            animate={{ y: 0, opacity: 1 }}
+                                            exit={{ y: -20, opacity: 0 }}
+                                            className="flex items-center gap-2 text-red-600"
+                                        >
+                                            Error! Try again.
                                         </motion.span>
                                     )}
                                 </AnimatePresence>

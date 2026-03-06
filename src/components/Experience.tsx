@@ -80,11 +80,11 @@ export default function Experience() {
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                            initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                            className="relative flex items-center justify-end md:justify-normal md:odd:flex-row-reverse group"
                         >
                             {/* Dot */}
                             <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-card absolute left-0 md:left-1/2 md:-ml-5 shadow-xl transition-all group-hover:border-primary/50 group-hover:scale-110 z-10">
