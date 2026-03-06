@@ -31,11 +31,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check configuration
+        run: |
+          ls -la
+          cat next.config.mjs
+
       - name: Build with Next.js
         run: npm run build
 
       - name: Debug Output folder
-        run: ls -R out
+        run: |
+          ls -la
+          ls -R out || echo "Out folder not found!"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
