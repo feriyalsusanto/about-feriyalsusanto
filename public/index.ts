@@ -2,6 +2,7 @@
 import AppleLogoIcon from './assets/icons/apple-logo.png';
 import AppStoreIcon from './assets/icons/appstore.png';
 import PlayStoreIcon from './assets/icons/playstore.png';
+import FSLogoIcon from './assets/icons/fs-logo.png';
 
 //Images
 import ProjectAppsenceMobile from './assets/images/project-appsence-mobile.png';
@@ -28,6 +29,7 @@ export {
     AppleLogoIcon,
     AppStoreIcon,
     PlayStoreIcon,
+    FSLogoIcon,
     //Images
     ProjectAppsenceMobile,
     ProjectBFIMobile,
