@@ -31,11 +31,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check configuration
-        run: |
-          ls -la
-          cat next.config.mjs
-
       - name: Build with Next.js
         run: npm run build
 
