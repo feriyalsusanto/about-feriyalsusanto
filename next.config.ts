@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   basePath: "/about-feriyalsusanto",
   assetPrefix: "/about-feriyalsusanto",
+  trailingSlash: true,
 };
 
 export default nextConfig;
