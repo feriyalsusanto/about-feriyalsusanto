@@ -42,6 +42,18 @@ const projects = [
         appStore: "https://apps.apple.com/id/app/untukmu/id6448539145?l=id"
     },
     {
+        title: "E-Tilang Kiosk",
+        description: "A self-service kiosk app for traffic fine payments at prosecutor offices, streamlining public transactions with secure e-payments and real-time case lookup. Built with Flutter.",
+        tags: ["Flutter"],
+        asset: "assets/images/project-tilang-kiosk.png"
+    },
+    {
+        title: "Halo JPN Mobile App",
+        description: "A mobile app connecting the public with Indonesia\'s State Attorney, offering real-time legal Q&A, guidance, and resources to make legal access simple and transparent. Built with Flutter.",
+        tags: ["Flutter"],
+        asset: "assets/images/project-halojpn-mobile.png"
+    },
+    {
         title: "Siklus Refill Mobile App (Customer)",
         description: "Siklus Refill customer app for ordering and tracking orders. Built with Flutter and released on Android Play Store & iOS App Store. (Note: Currently unavailable on stores)",
         tags: ["Flutter"],

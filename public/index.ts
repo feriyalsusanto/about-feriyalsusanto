@@ -23,6 +23,8 @@ import ProjectSocialMobile from './assets/images/project-social-mobile.png';
 import ProjectSocialPartner from './assets/images/project-social-partner.png';
 import ProjectUntukmuMobile from './assets/images/project-untukmu-mobile.png';
 import ProjectWavaMobile from './assets/images/project-wava-mobile.png';
+import ProjectHaloJPNMobile from './assets/images/project-halojpn-mobile.png';
+import ProjectTilangKiosk from './assets/images/project-tilang-kiosk.png';
 
 export {
     //Icons
@@ -48,5 +50,7 @@ export {
     ProjectSocialMobile,
     ProjectSocialPartner,
     ProjectUntukmuMobile,
-    ProjectWavaMobile
+    ProjectWavaMobile,
+    ProjectHaloJPNMobile,
+    ProjectTilangKiosk
 };
