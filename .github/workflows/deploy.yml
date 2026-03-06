@@ -40,9 +40,14 @@ jobs:
         run: npm run build
 
       - name: Debug Output folder
+        if: always()
         run: |
+          echo "=== Root directory ==="
           ls -la
-          ls -R out || echo "Out folder not found!"
+          echo "=== .next folder ==="
+          ls -la .next || echo ".next not found"
+          echo "=== out folder ==="
+          ls -la out || echo "out folder not found"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
