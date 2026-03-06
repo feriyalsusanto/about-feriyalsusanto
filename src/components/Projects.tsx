@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Folder, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { AppleLogoIcon, AppStoreIcon, PlayStoreIcon } from "../../public";
 
 const projects = [
     {
@@ -173,7 +174,7 @@ export default function Projects() {
                                             className="p-3 rounded-full bg-white transition-colors flex items-center gap-2"
                                             title="Play Store"
                                         >
-                                            <Image src="/assets/icons/playstore.png" alt="Play Store" width={20} height={20} />
+                                            <Image src={PlayStoreIcon.src} alt="Play Store" width={20} height={20} />
                                         </a>
                                     )}
                                     {project.appStore && (
@@ -184,7 +185,7 @@ export default function Projects() {
                                             className="p-3 rounded-full bg-white transition-colors flex items-center gap-2"
                                             title="App Store"
                                         >
-                                            <Image src="/assets/icons/appstore.png" alt="App Store" width={20} height={20} />
+                                            <Image src={AppleLogoIcon.src} alt="App Store" width={20} height={20} />
                                         </a>
                                     )}
                                 </div>

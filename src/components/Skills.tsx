@@ -7,7 +7,7 @@ const skillCategories = [
     {
         title: "Mobile Development",
         icon: <Smartphone className="text-primary" />,
-        skills: ["Flutter", "Dart", "Android / Kotlin", "iOS / Swift", "State Management (BLoC, GetX, etc.)"],
+        skills: ["Flutter", "Dart", "Android / Kotlin", "iOS / Swift"],
     },
     {
         title: "Frontend Development",
