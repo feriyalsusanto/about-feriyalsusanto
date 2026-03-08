@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Folder, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { AppleLogoIcon, AppStoreIcon, PlayStoreIcon } from "../../public";
+import { analyticsService } from "@/lib/analytics";
 
 const projects = [
     {
@@ -225,7 +226,10 @@ export default function Projects() {
                 {projects.length > 6 && (
                     <div className="mt-16 flex justify-center">
                         <button
-                            onClick={() => setShowAll(!showAll)}
+                            onClick={() => {
+                                setShowAll(!showAll);
+                                analyticsService.log("btn_show_all_projects");
+                            }}
                             className="px-8 py-4 rounded-full bg-primary text-black font-bold flex items-center gap-2 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95"
                         >
                             {showAll ? "Show Less" : "Show All Projects"}
