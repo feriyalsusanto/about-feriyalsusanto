@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { analyticsService } from "@/lib/analytics";
 
 const navItems = [
     { name: "Home", href: "#home" },
@@ -39,11 +40,12 @@ export default function Navbar() {
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
-                        <a key={item.name} href={item.href} className="nav-link">
+                        <a key={item.name} onClick={() => analyticsService.log("nav_link_" + (item.name.toLowerCase()))} href={item.href} className="nav-link">
                             {item.name}
                         </a>
                     ))}
                     <a
+                        onClick={() => analyticsService.log("nav_link_hire_me")}
                         href="#contact"
                         className="px-5 py-2 rounded-full bg-primary text-black text-sm font-semibold hover:bg-primary/90 transition-colors"
                     >
@@ -69,7 +71,10 @@ export default function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 className="nav-link text-lg"
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={() => {
+                                    setMobileMenuOpen(false)
+                                    analyticsService.log("nav_link_" + (item.name.toLowerCase()))
+                                }}
                             >
                                 {item.name}
                             </a>
