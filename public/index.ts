@@ -3,6 +3,7 @@ import AppleLogoIcon from './assets/icons/apple-logo.png';
 import AppStoreIcon from './assets/icons/appstore.png';
 import PlayStoreIcon from './assets/icons/playstore.png';
 import FSLogoIcon from './assets/icons/fs-logo.png';
+import WebsiteIcon from './assets/icons/www.png';
 
 //Images
 import ProjectAppsenceMobile from './assets/images/project-appsence-mobile.png';
@@ -25,6 +26,7 @@ import ProjectUntukmuMobile from './assets/images/project-untukmu-mobile.png';
 import ProjectWavaMobile from './assets/images/project-wava-mobile.png';
 import ProjectHaloJPNMobile from './assets/images/project-halojpn-mobile.png';
 import ProjectTilangKiosk from './assets/images/project-tilang-kiosk.png';
+import ProjectSMSWeb from './assets/images/project-sms-web.png';
 
 export {
     //Icons
@@ -32,6 +34,7 @@ export {
     AppStoreIcon,
     PlayStoreIcon,
     FSLogoIcon,
+    WebsiteIcon,
     //Images
     ProjectAppsenceMobile,
     ProjectBFIMobile,
@@ -52,5 +55,6 @@ export {
     ProjectUntukmuMobile,
     ProjectWavaMobile,
     ProjectHaloJPNMobile,
-    ProjectTilangKiosk
+    ProjectTilangKiosk,
+    ProjectSMSWeb
 };

@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <div className="max-w-7xl mx-auto space-y-32 py-32">
+      <div className="max-w-7xl mx-auto space-y-32 py-4">
         <AboutSection />
         <Experience />
         <Skills />

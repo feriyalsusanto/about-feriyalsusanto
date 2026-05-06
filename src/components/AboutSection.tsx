@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Cpu, Users, Target, Database, Zap, Smartphone, Layout } from "lucide-react";
+import { ShieldCheck, Users, Smartphone, Layout } from "lucide-react";
 
 export default function AboutSection() {
     return (
@@ -17,10 +17,10 @@ export default function AboutSection() {
                     >
                         <div className="space-y-6 text-muted text-lg leading-relaxed">
                             <p>
-                                Hi, I'm <span className="text-foreground font-semibold">Feriyal Septiawan Susanto</span>, a mobile developer with 11 years of experience specializing in cutting-edge mobile solutions and emerging technologies.
+                                Hi, I&apos;m <span className="text-foreground font-semibold">Feriyal Septiawan Susanto</span>, a mobile developer with 11 years of experience specializing in cutting-edge mobile solutions and emerging technologies.
                             </p>
                             <p>
-                                I'm passionate about developing mobile applications using <span className="text-primary">Flutter</span>, which I've been working with since 2018, along with 4 years of Android native development experience. Recently, I've expanded my expertise into <span className="text-accent">Frontend</span> development, focusing on building high-performance web systems, premium UI/UX designs, and seamless cross-platform experiences.
+                                I&apos;m passionate about developing mobile applications using <span className="text-primary">Flutter</span>, which I&apos;ve been working with since 2018, along with 4 years of Android native development experience. Recently, I&apos;ve expanded my expertise into <span className="text-accent">Frontend</span> development, focusing on building high-performance web systems, premium UI/UX designs, and seamless cross-platform experiences.
                             </p>
                             <p>
                                 My goal is to deliver high-quality, user-friendly digital solutions that leverage both traditional mobile development best practices and innovative frontend technologies to meet evolving client needs and user expectations.

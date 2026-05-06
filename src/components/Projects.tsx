@@ -2,12 +2,19 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Folder, ExternalLink } from "lucide-react";
+import { Folder } from "lucide-react";
 import Image from "next/image";
-import { AppleLogoIcon, AppStoreIcon, PlayStoreIcon } from "../../public";
+import { AppleLogoIcon, PlayStoreIcon, WebsiteIcon } from "../../public";
 import { analyticsService } from "@/lib/analytics";
 
 const projects = [
+    {
+        title: "Subur Mitra Sukses Web",
+        description: "Subur Mitra Sukses company profile website.",
+        tags: ["Web"],
+        asset: "assets/images/project-sms-web.png",
+        url: 'https://suburmitrasukses.com/',
+    },
     {
         title: "Cotaslice Mobile",
         description: "Mobile application for Cotaslice Pizza in Malang, East Java, Indonesia. Built with Flutter.",
@@ -163,7 +170,7 @@ export default function Projects() {
                             {/* Image Container */}
                             <div className="aspect-video bg-white/5 relative flex items-center justify-center overflow-hidden">
                                 {project.asset ? (
-                                    <img
+                                    <Image
                                         src={project.asset}
                                         alt={project.title}
                                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -179,6 +186,17 @@ export default function Projects() {
 
                                 {/* Overlay Links */}
                                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                                    {project.url && (
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 rounded-full bg-white transition-colors flex items-center gap-2"
+                                            title="Website URL"
+                                        >
+                                            <Image src={WebsiteIcon.src} alt="Website URL" width={20} height={20} />
+                                        </a>
+                                    )}
                                     {project.playStore && (
                                         <a
                                             href={project.playStore}

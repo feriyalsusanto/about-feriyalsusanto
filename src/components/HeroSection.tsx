@@ -21,7 +21,7 @@ export default function HeroSection() {
                         Available for Collaboration
                     </span>
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        Hi, I'm <span className="text-gradient">Feriyal Septiawan Susanto</span>
+                        Hi, I&apos;m <span className="text-gradient">Feriyal Septiawan Susanto</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-muted font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
                         A passionate <span className="text-foreground">Frontend Developer</span> specializing in
@@ -48,7 +48,7 @@ export default function HeroSection() {
                         onClick={() => analyticsService.log("btn_lets_talk")}
                         className="px-6 py-3 rounded-full border border-white/10 glass font-bold hover:bg-white/10 transition-colors"
                     >
-                        Let's Talk
+                        Let&apos;s Talk
                     </a>
                 </motion.div>
 

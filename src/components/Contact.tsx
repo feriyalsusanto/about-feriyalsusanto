@@ -54,7 +54,7 @@ export default function Contact() {
 
 
     return (
-        <section id="contact" className="py-24 px-6 bg-background relative overflow-hidden">
+        <section id="contact" className="px-6 bg-background relative overflow-hidden">
             {/* Background Decor */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -z-10" />
 
@@ -62,9 +62,9 @@ export default function Contact() {
                 <div className="glass p-12 rounded-[2rem] border-white/10 relative">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
-                            <h2 className="text-4xl font-bold mb-6">Let's build something <span className="text-gradient">extraordinary</span> together.</h2>
+                            <h2 className="text-4xl font-bold mb-6">Let&apos;s build something <span className="text-gradient">extraordinary</span> together.</h2>
                             <p className="text-muted mb-8 text-lg">
-                                I'm currently available for freelance work and full-time opportunities. If you have a project that needs a premium touch, let's talk.
+                                I&apos;m currently available for freelance work and full-time opportunities. If you have a project that needs a premium touch, let&apos;s talk.
                             </p>
 
                             <div className="flex items-center gap-4 group">

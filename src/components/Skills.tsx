@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Smartphone, Layout, Database, Zap, Cpu } from "lucide-react";
+import { Smartphone, Layout, Zap } from "lucide-react";
 
 const skillCategories = [
     {

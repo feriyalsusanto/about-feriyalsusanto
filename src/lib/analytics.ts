@@ -1,9 +1,9 @@
-import { getAnalytics, logEvent, isSupported } from "firebase/analytics";
+import { getAnalytics, logEvent, isSupported, Analytics, EventParams } from "firebase/analytics";
 import { app } from "./firebase";
 
 class AnalyticsService {
     private static instance: AnalyticsService;
-    private analytics: any = null;
+    private analytics: Analytics | null = null;
     private initialized: boolean = false;
 
     private constructor() {
@@ -38,7 +38,7 @@ class AnalyticsService {
      * @param eventName Name of the event.
      * @param params Additional parameters for the event.
      */
-    async log(eventName: string, params?: Record<string, any>) {
+    async log(eventName: string, params?: EventParams) {
         await this.init();
         if (this.analytics) {
             logEvent(this.analytics, eventName, params);
